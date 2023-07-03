@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface ProductRepositoryInterface {
 
-    public List<Product> getAll();
+   List<Product> getAll();
 
-    public Product getById(int id);
+    Product getById(int id);
 
-    public void add(Product product);
+    void add(Product product);
 }

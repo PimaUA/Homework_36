@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface OrderRepositoryInterface {
 
-    public List<Order> getAll();
+    List<Order> getAll();
 
-    public Order getById(int id);
+    Order getById(int id);
 
-    public void add(Order order);
+    void add(Order order);
 }
