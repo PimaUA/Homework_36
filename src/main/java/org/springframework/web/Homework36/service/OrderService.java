@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.Homework36.entity.Order;
-import org.springframework.web.Homework36.repository.OrderRepository;
+import org.springframework.web.Homework36.repository.OrderRepositoryImpl;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import java.util.List;
 @Scope("prototype")
 public class OrderService {
     @Autowired
-    private OrderRepository orderRepository;
+    private OrderRepositoryImpl orderRepository;
 
     @Transactional
     public List<Order> getAllOrders() {

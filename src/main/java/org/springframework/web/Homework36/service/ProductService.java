@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.Homework36.entity.Product;
-import org.springframework.web.Homework36.repository.ProductRepository;
+import org.springframework.web.Homework36.repository.ProductRepositoryImpl;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ import java.util.List;
 public class ProductService {
     private static final Logger LOGGER = LoggerFactory.getLogger(ProductService.class);
     @Autowired
-    private ProductRepository productRepository;
+    private ProductRepositoryImpl productRepository;
 
     @Transactional
     public List<Product> getAllProducts() {
