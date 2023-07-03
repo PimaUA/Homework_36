@@ -17,12 +17,20 @@ public class OrderService {
 
     @Transactional
     public List<Order> getAllOrders() {
-        return orderRepository.getAll();
+        List<Order> allOrders = orderRepository.getAll();
+        if (allOrders == null) {
+            throw new RuntimeException();
+        }
+        return allOrders;
     }
 
     @Transactional
     public Order getOrderById(int id) {
-      return orderRepository.getById(id);
+        Order order = orderRepository.getById(id);
+        if (order == null) {
+            throw new RuntimeException();
+        }
+        return order;
     }
 
     @Transactional

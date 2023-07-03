@@ -26,8 +26,7 @@ public class OrderRepository implements OrderRepositoryInterface {
 
     @Override
     public void add(Order order) {
-        /*Order newOrder=entityManager.merge(order);
-        order.setId(newOrder.getId());*/
-        entityManager.merge(order);
+        Order newOrder=entityManager.merge(order);
+        order.setId(newOrder.getId());
     }
 }

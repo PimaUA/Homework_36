@@ -26,6 +26,7 @@ private EntityManager entityManager;
 
     @Override
     public void add(Product product) {
-        entityManager.merge(product);
+        Product newProduct=entityManager.merge(product);
+        product.setId(newProduct.getId());
     }
 }
